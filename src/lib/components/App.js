@@ -2,7 +2,12 @@ import React, { PropTypes } from 'react';
 
 class App extends React.Component {
   render () {
-    return (<div>HELLO WORLD</div>);
+    return (
+      <div>
+        APP CONTAINER
+        { this.props.children }
+      </div>
+    );
   }
 }
 

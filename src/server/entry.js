@@ -1,12 +1,20 @@
 import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
+import nunjucks from 'nunjucks';
+
+
 
 let app = express();
 
-const makeServer = (config) => {
+nunjucks.configure(path.join(__dirname, 'views'), {
+    autoescape: true,
+    express: app
+});
 
-  if (process.env.NODE_ENV === 'development') {
+const makeServer = (env, config) => {
+
+  if (env === 'development') {
 
     let compiler = webpack(config);
 
@@ -20,7 +28,7 @@ const makeServer = (config) => {
   }
 
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'views', 'base.html'));
+    res.render('base.html', {'env': process.env.NODE_ENV});
   });
 
   app.listen(3000, 'localhost', function(err) {
