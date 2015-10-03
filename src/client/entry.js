@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'; //eslint-disable-line no-unused-vars
 import {render} from 'react-dom';
-import App from '../lib/App';
+import Router from '../lib/main/Router';
+import createHistory from 'history/lib/createBrowserHistory';
 
 import '../assets/css/app.less';
 
-render(<App />, document.getElementById('root'));
+render(
+  <Router history={ createHistory() } />,
+  document.getElementById('root')
+);

@@ -8,6 +8,9 @@ config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin(),
+  new webpack.DefinePlugin({
+    __REDUX_DEBUG__: JSON.stringify(JSON.parse(process.env.REDUX_DEBUG || 'false'))
+  })
 ];
 
 config.module.loaders = config.module.loaders.concat([

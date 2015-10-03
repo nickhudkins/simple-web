@@ -1,7 +1,7 @@
 import App from './App';
-import Foo from './Foo';
+import CounterExample from './CounterExample';
 
 export default {
   App,
-  Foo
+  CounterExample
 };

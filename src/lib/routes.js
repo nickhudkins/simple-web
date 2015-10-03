@@ -1,10 +1,12 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { App, Foo } from './components';
+import { IndexRoute, Route } from 'react-router';
+import { App, CounterExample } from './components';
+import AppContainer from './main/AppContainer';
 
 const routes = (
-  <Route path="/" component={ App }>
-    <Route path="foo" component={ Foo } />
+  <Route path="/" component={ AppContainer }>
+    <IndexRoute component={ App } />
+    <Route path="counter" component={ CounterExample } />
   </Route>
 );
 

@@ -12,5 +12,4 @@
 
 ### Known Issues
 
-- The webpack configuration files are awfully duplicative.
 - It does not currently render React components server-side.
