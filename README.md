@@ -10,7 +10,7 @@
 
 If all goes well, you will get something cute like this:
 
-![SERVER CREATED | HOST : localhost | PORT: 3000](https://s3.amazonaws.com/f.cl.ly/items/213c1y1X1M1I3S1e1e0v/Screen%20Shot%202015-10-03%20at%201.31.10%20PM.png)
+![SERVER CREATED | HOST : localhost | PORT: 3000](https://s3.amazonaws.com/f.cl.ly/items/0P2R2R112h221l2a373Z/Screen%20Shot%202015-10-03%20at%201.49.15%20PM.png)
 
 ### Conventions
 - Place all 'css-modules' within `src/assets/css-modules/styles`, this will

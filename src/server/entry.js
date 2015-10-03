@@ -38,13 +38,16 @@ const makeServer = (env, config) => {
       return;
     }
 
-    console.log('🚀  ' +
+    console.log(clc.yellow('**********************************************************'))
+    console.log(clc.yellow('*   ')+'🚀  ' +
      clc.green('SERVER CREATED') +
      ' | ' +
      clc.yellow('HOST:') + clc.magenta('localhost') +
      ' | ' +
      clc.yellow('PORT:') + clc.magenta('3000') +
-     '  🚀');
+     '  🚀' + clc.yellow('    *'));
+     console.log(clc.yellow('**********************************************************'))
+     console.log('\n👍  ' + clc.yellow('YOU DID IT!') + '\n');
   });
 };
 
