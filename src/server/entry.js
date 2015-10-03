@@ -41,7 +41,7 @@ const makeServer = (env, config) => {
     console.log('🚀  ' +
      clc.green('SERVER CREATED') +
      ' | ' +
-     clc.yellow('HOST: ') + clc.magenta('localhost') +
+     clc.yellow('HOST:') + clc.magenta('localhost') +
      ' | ' +
      clc.yellow('PORT:') + clc.magenta('3000') +
      '  🚀');
