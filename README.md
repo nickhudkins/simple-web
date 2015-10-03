@@ -1,4 +1,6 @@
-# Simple Web Project (heh.)
+# Simple Web Project
+
+### Now with Redux!
 
 ## How To Use
 
