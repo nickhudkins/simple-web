@@ -1,6 +1,5 @@
 import path from 'path';
 import express from 'express';
-import webpack from 'webpack';
 import nunjucks from 'nunjucks';
 var clc = require('cli-color');
 
@@ -13,6 +12,7 @@ nunjucks.configure(path.join(__dirname, 'views'), {
 
 const makeServer = (env, config) => {
   if (env === 'development') {
+    const webpack = require('webpack');
     let compiler = webpack(config);
 
     app.use(require('webpack-dev-middleware')(compiler, {

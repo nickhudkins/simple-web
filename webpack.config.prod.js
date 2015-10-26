@@ -11,6 +11,9 @@ config.plugins = [
       'NODE_ENV': JSON.stringify('production')
     }
   }),
+  new webpack.DefinePlugin({
+    __REDUX_DEBUG__: JSON.stringify(JSON.parse(process.env.REDUX_DEBUG || 'false'))
+  }),
   new webpack.optimize.UglifyJsPlugin({
     compressor: {
       warnings: false
