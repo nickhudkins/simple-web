@@ -4,6 +4,7 @@ import nunjucks from 'nunjucks';
 var clc = require('cli-color');
 
 let app = express();
+app.set('port', (process.env.PORT || 3000));
 
 nunjucks.configure(path.join(__dirname, 'views'), {
     autoescape: true,
@@ -32,7 +33,7 @@ const makeServer = (env, config) => {
     res.render('base.html', { 'env': env });
   });
 
-  app.listen(3000, 'localhost', function(err) {
+  app.listen(app.get('port'), 'localhost', function(err) {
     if (err) {
       console.log(err);
       return;
@@ -44,7 +45,7 @@ const makeServer = (env, config) => {
      ' | ' +
      clc.yellow('HOST:') + clc.magenta('localhost') +
      ' | ' +
-     clc.yellow('PORT:') + clc.magenta('3000') +
+     clc.yellow('PORT:') + clc.magenta(app.get('port')) +
      '  🚀' + clc.yellow('    *'));
      console.log(clc.yellow('**********************************************************'))
      console.log('\n👍  ' + clc.yellow('YOU DID IT!') + '\n');
