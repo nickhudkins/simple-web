@@ -14,7 +14,6 @@ module.exports = {
     publicPath: '/static/'
   },
   resolve: {
-    //'' is a necessary extension
     root: [
       path.join(__dirname, 'src'),
       /*
@@ -29,6 +28,7 @@ module.exports = {
       'node_modules',
       'css-modules', //Friendly CSS Modules! (See config.resolve.root...)
     ],
+    //'' is a necessary extension
     extensions: ['', '.js', '.json', '.less'],
   },
   plugins: [],
@@ -36,8 +36,27 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
-        include: path.join(__dirname, 'src')
+        loader: 'babel',
+        include: path.join(__dirname, 'src'),
+        query: {
+          stage: 0,
+          env: {
+            development: {
+              plugins: [
+                'react-transform'
+              ],
+              extra: {
+                'react-transform': {
+                  transforms: [{
+                    transform: 'react-transform-hmr',
+                    imports: ['react'],
+                    locals: ['module']
+                  }]
+                }
+              }
+            }
+          }
+        }
       }
     ]
   }

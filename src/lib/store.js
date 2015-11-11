@@ -2,12 +2,9 @@
 
 import { createStore, combineReducers, compose } from 'redux';
 import * as reducers from './reducers';
-import { devTools } from 'redux-devtools';
 
 const reducer = combineReducers(reducers);
-const store = compose(
-  devTools()
-)(createStore)(reducer);
+const store = createStore(reducer);
 
 
 // const reducer = combineReducers(reducers);
