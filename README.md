@@ -8,7 +8,6 @@
 - `npm run build` will build the project for `production`.
 - `npm run start` will run the project in `production` mode.
 - `npm run dev` will run the project with HMR.
-- `npm run debug:redux` will run the project with HMR. and :gasp: `redux-devtools`
 
 If all goes well, you will get something cute like this:
 
@@ -20,4 +19,4 @@ If all goes well, you will get something cute like this:
   is the coolest thing ever.
 
 ### Known Issues
-- It does not currently render React components server-side.
+- It no longer has Redux Devtools! (Waiting on a stable release)
