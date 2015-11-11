@@ -62,7 +62,7 @@ export default (env, config) => {
     });
   });
 
-  app.listen(app.get('port'), 'localhost', function(err) {
+  app.listen(app.get('port'), '0.0.0.0', function(err) {
     if (err) {
       console.log(err);
       return;
@@ -74,7 +74,7 @@ export default (env, config) => {
     console.log(clc.yellow('*   ') + '🚀  ' +
      clc.green('SERVER CREATED') +
      ' | ' +
-     clc.yellow('HOST:') + clc.magenta('localhost') +
+     clc.yellow('HOST:') + clc.magenta('0.0.0.0') +
      ' | ' +
      clc.yellow('PORT:') + clc.magenta(app.get('port')) +
      '  🚀' + clc.yellow('    *'));

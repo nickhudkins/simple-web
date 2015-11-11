@@ -1,0 +1,6 @@
+app:
+  build: ./
+  dockerfile: './build/Dockerfile.app'
+  command: npm run app:start
+  ports:
+    - "80:3000"

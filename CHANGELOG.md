@@ -1,3 +1,11 @@
+# 0.3.0 (Mr. Goodbar)
+**New Features**
+
+Version `0.3.0` is an exciting release. It's been a long time coming, but
+we have added `docker` && `docker-compose` into the mix. This means you can
+deploy this to places! It's for you to figure out where you want to do it but...
+I have provided a small guide in `README.md` to get you started on Digital Ocean.
+
 # 0.2.0 (York Peppermint Pattie)
 
 **New Features**
